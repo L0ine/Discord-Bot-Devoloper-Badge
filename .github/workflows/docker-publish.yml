@@ -1,0 +1,33 @@
+name: Docker Build & Push
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Log in to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GHCR_PAT }}
+
+    - name: Build Docker image
+      run: |
+        IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/dev-badge-bot
+        docker build . --file Dockerfile --tag $IMAGE_NAME:latest
+        docker tag $IMAGE_NAME:latest $IMAGE_NAME:${{ github.sha }}
+
+    - name: Push Docker image
+      run: |
+        IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/dev-badge-bot
+        docker push $IMAGE_NAME:latest
+        docker push $IMAGE_NAME:${{ github.sha }}
