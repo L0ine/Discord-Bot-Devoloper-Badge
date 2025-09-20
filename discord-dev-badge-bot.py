@@ -2,7 +2,7 @@
 
 #Discord Developer Badge Bot - Mit direkten DM-Erinnerungen
 #Erinnert dich jeden Monat per Direktnachricht
-"""
+
 
 import discord
 from discord.ext import commands, tasks
@@ -54,7 +54,6 @@ bot_owner_id = None  # Wird beim ersten /ping gesetzt
 
 @bot.event
 async def on_ready():
-    """Bot ist bereit"""
     logger.info(f'Bot ist bereit! Eingeloggt als {bot.user}')
     logger.info(f'Verbunden mit {len(bot.guilds)} Server(n)')
     
@@ -86,7 +85,6 @@ async def on_ready():
         logger.info("Monatliche DM-Erinnerungen aktiviert")
 
 async def send_dm_reminder():
-    """Sendet DM-Erinnerung an den Bot-Owner"""
     global bot_owner_id
     
     # User ID verwenden (entweder aus ENV oder die gespeicherte)
@@ -129,11 +127,9 @@ async def send_dm_reminder():
 
 @tasks.loop(hours=24*25)  # Alle 25 Tage
 async def monthly_reminder():
-    """Sendet monatliche DM-Erinnerung"""
     await send_dm_reminder()
 
 def format_uptime(seconds):
-    """Formatiert Uptime in lesbarem Format"""
     days, remainder = divmod(int(seconds), 86400)
     hours, remainder = divmod(remainder, 3600)
     minutes, seconds = divmod(remainder, 60)
@@ -147,7 +143,6 @@ def format_uptime(seconds):
     return " ".join(parts) or "0s"
 
 def get_latency_status(latency_ms):
-    """Gibt Status basierend auf Latenz zurück"""
     if latency_ms < 100:
         return "🟢 Ausgezeichnet"
     elif latency_ms < 200:
@@ -160,7 +155,6 @@ def get_latency_status(latency_ms):
 # Prefix Commands
 @bot.command(name='ping')
 async def ping_command(ctx):
-    """Ping Command - wichtig für Developer Badge!"""
     global bot_owner_id
     
     # User ID beim ersten Ping speichern (falls nicht in ENV gesetzt)
@@ -187,7 +181,6 @@ async def ping_command(ctx):
 
 @bot.command(name='uptime')
 async def uptime_command(ctx):
-    """Zeigt Bot Uptime"""
     uptime_seconds = time.time() - start_time
     
     embed = discord.Embed(
@@ -204,7 +197,6 @@ async def uptime_command(ctx):
 
 @bot.command(name='status')
 async def status_command(ctx):
-    """Zeigt Bot Status"""
     embed = discord.Embed(
         title="📊 Bot Status",
         color=0x9932cc,
@@ -224,7 +216,6 @@ async def status_command(ctx):
 
 @bot.command(name='hilfe')
 async def help_command(ctx):
-    """Zeigt alle verfügbaren Commands"""
     embed = discord.Embed(
         title="❓ Commands",
         description="**Prefix:** `!` | **Slash:** `/`",
@@ -248,7 +239,6 @@ async def help_command(ctx):
 
 @bot.command(name='test')
 async def test_reminder(ctx):
-    """Sendet Test-Erinnerung sofort"""
     global bot_owner_id
     
     if not bot_owner_id and not YOUR_USER_ID:
@@ -261,7 +251,6 @@ async def test_reminder(ctx):
 # Slash Commands
 @bot.tree.command(name='ping', description='Antwortet mit pong - wichtig für Developer Badge!')
 async def ping_slash(interaction: discord.Interaction):
-    """Slash Ping Command"""
     global bot_owner_id
     
     if not bot_owner_id and not YOUR_USER_ID:
@@ -287,7 +276,6 @@ async def ping_slash(interaction: discord.Interaction):
 
 @bot.tree.command(name='uptime', description='Zeigt Bot-Uptime')
 async def uptime_slash(interaction: discord.Interaction):
-    """Slash Uptime Command"""
     uptime_seconds = time.time() - start_time
     
     embed = discord.Embed(
@@ -304,7 +292,6 @@ async def uptime_slash(interaction: discord.Interaction):
 
 @bot.tree.command(name='status', description='Zeigt Bot-Status')
 async def status_slash(interaction: discord.Interaction):
-    """Slash Status Command"""
     embed = discord.Embed(
         title="📊 Bot Status",
         color=0x9932cc,
@@ -323,7 +310,6 @@ async def status_slash(interaction: discord.Interaction):
 
 @bot.tree.command(name='help', description='Zeigt alle verfügbaren Commands')
 async def help_slash(interaction: discord.Interaction):
-    """Slash Help Command"""
     embed = discord.Embed(
         title="❓ Commands",
         description="**Prefix:** `!` | **Slash:** `/`",
@@ -346,7 +332,6 @@ async def help_slash(interaction: discord.Interaction):
 
 @bot.tree.command(name='test', description='Sendet Test-Erinnerung per DM')
 async def test_slash(interaction: discord.Interaction):
-    """Test-Erinnerung senden"""
     global bot_owner_id
     
     if not bot_owner_id and not YOUR_USER_ID:
@@ -359,7 +344,6 @@ async def test_slash(interaction: discord.Interaction):
 # Error Handling
 @bot.event
 async def on_command_error(ctx, error):
-    """Behandelt Command-Fehler"""
     logger.error(f"Command-Fehler: {error}")
 
 def main():
