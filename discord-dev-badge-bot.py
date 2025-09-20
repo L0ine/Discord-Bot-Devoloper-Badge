@@ -363,7 +363,7 @@ async def on_command_error(ctx, error):
     logger.error(f"Command-Fehler: {error}")
 
 def main():
-    """Hauptfunktion"""
+
     if not TOKEN:
         logger.error("DISCORD_BOT_TOKEN nicht gefunden!")
         logger.error("Erstelle eine .env Datei oder setze Umgebungsvariablen")
