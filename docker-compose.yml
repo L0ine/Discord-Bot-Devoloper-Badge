@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  discord-dev-badge-bot:
+    build: .
+    container_name: discord-dev-badge-bot
+    restart: always
+    env_file: .env
