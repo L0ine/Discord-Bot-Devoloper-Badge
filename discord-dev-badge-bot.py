@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""
+
+
+# Trigger für neuen Docker-Build
+
+
+
+
 Discord Developer Badge Bot - Mit direkten DM-Erinnerungen
 Erinnert dich jeden Monat per Direktnachricht
 """
