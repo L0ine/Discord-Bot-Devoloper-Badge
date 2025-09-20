@@ -5,4 +5,4 @@ services:
     build: .
     container_name: discord-dev-badge-bot
     restart: always
-    env_file: .env
+    env_file: .env  # jetzt sicher, nur lokal
