@@ -2,7 +2,44 @@ version: "3.9"
 
 services:
   discord-dev-badge-bot:
-    build: .
+    # Use pre-built image from GitHub Container Registry
+    image: ghcr.io/l0ine/discord-bot-devoloper-badge:latest
+    
+    # Fallback to building locally if needed
+    # build: .
+    
     container_name: discord-dev-badge-bot
-    restart: always
-    env_file: .env  # jetzt sicher, nur lokal
+    restart: unless-stopped
+    
+    # Environment variables from .env file
+    env_file: 
+      - .env
+    
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+networks:
+  default:
+    name: discord-bot-network
