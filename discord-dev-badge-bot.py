@@ -11,6 +11,19 @@ import time
 from datetime import datetime
 import logging
 
+import os
+
+DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+CLIENT_ID = os.getenv("CLIENT_ID")
+GUID_ID = os.getenv("GUID_ID")
+YOUR_USER_ID = os.getenv("YOUR_USER_ID")
+
+if not all([DISCORD_BOT_TOKEN, CLIENT_ID, GUID_ID, YOUR_USER_ID]):
+    raise Exception("Bitte setze die Umgebungsvariablen: DISCORD_BOT_TOKEN, CLIENT_ID, GUID_ID, YOUR_USER_ID")
+
+
+
+
 # .env Datei laden (falls vorhanden)
 try:
     from dotenv import load_dotenv

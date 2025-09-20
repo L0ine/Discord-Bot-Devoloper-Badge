@@ -22,10 +22,12 @@ jobs:
 
       - name: Build Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/discord-dev-badge-bot:latest
+          IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/discord-dev-badge-bot:latest
           docker build . -t $IMAGE_NAME
 
       - name: Push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/discord-dev-badge-bot:latest
+          IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/discord-dev-badge-bot:latest
           docker push $IMAGE_NAME
+
+

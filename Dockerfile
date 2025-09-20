@@ -1,15 +1,13 @@
-# Python-Image
 FROM python:3.11-slim
 
-# Arbeitsverzeichnis im Container
 WORKDIR /app
 
-# Dependencies installieren
+# Nur die Abhängigkeiten installieren
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Code reinkopieren
-COPY . .
+# Nur den Bot-Code kopieren
+COPY discord-dev-badge-bot.py .
 
-# Startkommando
+# Standard-Startbefehl, der ENV-Variablen nutzt
 CMD ["python", "discord-dev-badge-bot.py"]
