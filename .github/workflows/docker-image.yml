@@ -11,27 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Repository auschecken
       - uses: actions/checkout@v4
 
-      # 2️⃣ Login zu GitHub Container Registry
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_PAT }}
+          username: ${{ secrets.GHCR_USERNAME }}
+          password: ${{ secrets.GHCR_TOKEN }}
 
-      # 3️⃣ Docker-Image bauen
       - name: Build Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/discord-dev-badge-bot
+          IMAGE_NAME=ghcr.io/${{ github.repository_owner | lower }}/discord-dev-badge-bot
           docker build . -t $IMAGE_NAME:latest
           docker tag $IMAGE_NAME:latest $IMAGE_NAME:${{ github.sha }}
 
-      # 4️⃣ Docker-Image pushen
       - name: Push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/discord-dev-badge-bot
+          IMAGE_NAME=ghcr.io/${{ github.repository_owner | lower }}/discord-dev-badge-bot
           docker push $IMAGE_NAME:latest
           docker push $IMAGE_NAME:${{ github.sha }}
