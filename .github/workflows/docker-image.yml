@@ -9,6 +9,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -22,6 +23,7 @@ jobs:
       - name: Build Docker image
         run: |
           IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/discord-dev-badge-bot
+          # In lowercase umwandeln
           IMAGE_NAME_LOWER=$(echo $IMAGE_NAME | tr '[:upper:]' '[:lower:]')
           docker build . --file Dockerfile --tag $IMAGE_NAME_LOWER:latest
           docker tag $IMAGE_NAME_LOWER:latest $IMAGE_NAME_LOWER:${{ github.sha }}
