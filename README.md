@@ -75,47 +75,6 @@ https://discord.com/api/oauth2/authorize?client_id=DEINE_CLIENT_ID&permissions=2
 3. ✅ Auf **"Get Badge"** klicken
 4. 🎉 **Badge erscheint in deinem Profil!**
 
-### ⚠️ Häufige Fehler vermeiden
-
-| ❌ Fehler | ✅ Richtig |
-|-----------|------------|
-| Nur Prefix Commands (`!ping`) | Slash Commands verwenden (`/ping`) |
-| Bot läuft lokal/nur manchmal | Bot ist 24/7 online (Docker!) |
-| Vergessen die Aktivität | Automatische Erinnerungen aktiviert |
-| Keine Bot Permissions | Korrekte OAuth2 URL verwenden |
-
----
-
-## 🚀 Features
-
-<div align="center">
-
-| Feature | Status | Beschreibung |
-|---------|--------|--------------|
-| 🔔 **Automatische DM-Erinnerungen** | ✅ | Nie wieder Badge verlieren! |
-| ⚡ **Slash Commands** | ✅ | Moderne Discord Commands |
-| 🏓 **Prefix Commands** | ✅ | Klassische `!commands` |
-| 🐳 **Docker Ready** | ✅ | Ein-Klick Deployment |
-| 🔄 **24/7 Uptime** | ✅ | Automatische Restarts |
-| 📊 **Status Monitoring** | ✅ | Health Checks & Logs |
-| 🛡️ **Multi-Platform** | ✅ | AMD64 + ARM64 Support |
-| 🔐 **Secure** | ✅ | Non-root Container |
-
-</div>
-
-### 🎮 Verfügbare Commands
-
-<div align="center">
-
-| Command | Prefix | Slash | Zweck | Badge-relevant |
-|---------|--------|-------|--------|----------------|
-| 🏓 **Ping** | `!ping` | `/ping` | Latenz testen | ✅ **JA** |
-| ⏰ **Uptime** | `!uptime` | `/uptime` | Bot-Laufzeit | ❌ Nein |
-| 📊 **Status** | `!status` | `/status` | Bot-Informationen | ❌ Nein |
-| ❓ **Help** | `!hilfe` | `/help` | Command-Liste | ❌ Nein |
-| 🧪 **Test** | `!test` | `/test` | Erinnerung testen | ❌ Nein |
-
-</div>
 
 ---
 
@@ -175,12 +134,12 @@ python discord-dev-badge-bot.py
 
 ### 📋 Erforderliche Umgebungsvariablen
 
-| Variable | Erforderlich | Beschreibung | Beispiel |
-|----------|--------------|-------------|-----------|
-| `DISCORD_BOT_TOKEN` | ✅ **JA** | Bot Token aus Developer Portal | `` |
-| `CLIENT_ID` | ✅ **JA** | Application ID für Slash Commands | `` |
-| `GUILD_ID` | ❌ Optional | Server ID (für lokale Commands) | `` |
-| `YOUR_USER_ID` | ❌ Optional | Deine User ID (für DMs) | `...` |
+| Variable | Erforderlich | Beschreibung |
+|----------|--------------|-------------|
+| `DISCORD_BOT_TOKEN` | ✅ **JA** | Bot Token aus Developer Portal |
+| `CLIENT_ID` | ✅ **JA** | Application ID für Slash Commands | 
+| `GUILD_ID` | ❌ Optional | Server ID (für lokale Commands) | 
+| `YOUR_USER_ID` | ❌ Optional | Deine User ID (für DMs) | 
 
 ### 📄 .env Datei Beispiel
 
@@ -188,10 +147,8 @@ python discord-dev-badge-bot.py
 # Discord Bot Configuration
 DISCORD_BOT_TOKEN=
 CLIENT_ID=
-
-# Optional Settings
-GUILD_ID=  # Für schnellere Slash Command Updates
-YOUR_USER_ID=  # Für gezielte DM-Erinnerungen
+GUILD_ID=  
+YOUR_USER_ID=  
 ```
 
 ---
@@ -272,27 +229,6 @@ https://discord.com/api/oauth2/authorize?client_id=DEINE_ID&permissions=2048&sco
 
 ---
 
-## 🎨 Erweiterte Features & Ideen
-
-### 🔮 Geplante Features (Roadmap)
-
-- [ ] 📊 **Web Dashboard** für Bot-Statistiken
-- [ ] 🎵 **Multiple Server Support** mit separaten Konfigurationen
-- [ ] 📈 **Badge-Status Tracking** - Wann wurde zuletzt gepingt?
-- [ ] 🌐 **Multi-Language Support** (English, Deutsch, etc.)
-- [ ] 📱 **Mobile-Friendly Commands** mit Buttons
-- [ ] 🔔 **Flexible Reminder Settings** (15, 20, 25 Tage)
-- [ ] 📊 **Analytics Dashboard** - Badge-Statistiken für Teams
-- [ ] 🎯 **Team Management** - Mehrere Entwickler verwalten
-
-### 🛡️ Security Features
-
-- 🔒 **Non-root Docker Container**
-- 🛠️ **Automatische Dependency Updates** (Dependabot)
-- 📋 **Health Checks** & Monitoring
-- 🔐 **Environment Variable Validation**
-- 🧹 **Clean Shutdown** Handling
-
 ### 💡 Community Ideen
 
 <details>
@@ -312,70 +248,9 @@ https://discord.com/api/oauth2/authorize?client_id=DEINE_ID&permissions=2048&sco
 ```
 </details>
 
-<details>
-<summary>📊 Team Dashboard Konzept</summary>
 
-- 👥 **Multi-User Management**: Team-Übersicht
-- 📈 **Statistics**: Wer hat wann zuletzt gepingt?
-- ⚠️ **Risk Alerts**: Badge läuft bald ab!
-- 🏆 **Leaderboards**: Längste Streaks
-- 📱 **Slack/Teams Integration**: Erinnerungen in Arbeitskanäle
-</details>
+### 🎉 Contributors
 
-### 🔧 Entwickler-Tools
-
-```bash
-# Development Scripts hinzufügen
-npm run dev          # Lokale Entwicklung mit Hot-Reload
-npm run test         # Automated Testing
-npm run lint         # Code Quality Checks
-npm run security     # Security Audit
-```
-
-### 📈 Analytics & Insights
-
-```yaml
-# Beispiel Analytics Config
-analytics:
-  track_commands: true
-  track_uptime: true  
-  export_metrics: true
-  dashboard_port: 3000
-```
-
----
-
-## 🤝 Contributing & Community
-
-### 🚀 Mitmachen
-
-Wir lieben Contributions! Hier sind einige Ideen:
-
-- 🐛 **Bug Reports**: [Issues öffnen](https://github.com/L0ine/Discord-Bot-Devoloper-Badge/issues)
-- 💡 **Feature Requests**: Neue Ideen vorschlagen
-- 📝 **Dokumentation**: README verbessern
-- 🔧 **Code**: Pull Requests willkommen
-- 🌐 **Übersetzungen**: Multi-Language Support
-
-### 📋 Development Setup
-
-```bash
-# Fork & Clone
-git clone https://github.com/yourusername/Discord-Bot-Devoloper-Badge.git
-
-# Branch erstellen
-git checkout -b feature/amazing-feature
-
-# Änderungen commiten
-git commit -m 'feat: Add amazing feature'
-
-# Push & Pull Request
-git push origin feature/amazing-feature
-```
-
-### 🎉 Hall of Fame
-
-Danke an alle Contributors:
 
 <div align="center">
 
@@ -400,8 +275,7 @@ Danke an alle Contributors:
 
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/L0ine/Discord-Bot-Devoloper-Badge/issues)
 - 💬 **Fragen**: [GitHub Discussions](https://github.com/L0ine/Discord-Bot-Devoloper-Badge/discussions)
-- 📚 **Wiki**: [Dokumentation](https://github.com/L0ine/Discord-Bot-Devoloper-Badge/wiki)
-- 💌 **Discord**: [Support Server](https://discord.gg/your-server) (Coming Soon!)
+- 💌 **Discord**: [Support Server](https://discord.gg/UP3PRuHZBe) 
 
 ---
 
