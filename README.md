@@ -1,27 +1,19 @@
 # <img width="40" height="40" alt="discord-logo" src="https://github.com/user-attachments/assets/adabd300-70df-4847-9b34-e51d207d254d" /> <img width="40" height="40" alt="grafik" src="https://github.com/user-attachments/assets/478efc93-83c4-46bc-acb7-94e81883d652" /> discord dev badge bot
 
+
 <div align="left">
 
 ![Discord Developer Badge](https://img.shields.io/badge/Discord-Developer%20Badge-5865F2?style=for-the-badge&logo=discord&logoColor=white)
 [![Docker Build](https://img.shields.io/github/actions/workflow/status/L0ine/Discord-Bot-Devoloper-Badge/docker-publish.yml?style=for-the-badge&logo=docker)](https://github.com/L0ine/Discord-Bot-Devoloper-Badge/actions/workflows/docker-publish.yml)
 </div>
 
+---
+
 ### what's this about?
 **literally just want that shiny dev badge? I got you =)**
 
 This is a Tutorial for Discord's **active developer badge**
 
-<div align="center">
-
-### ✨ this could be you ✨
-
-<img width="350" height="470" alt="discord developer badge flex" src="https://github.com/user-attachments/assets/b5ba47e6-f01e-4429-95e6-a02b5e75d053" style="border-radius: 15px; box-shadow: 0 8px 32px rgba(88, 101, 242, 0.3); border: 3px solid #5865F2;" />
-
-**that shiny developer badge hits different when it's on YOUR profile **
-
-</div>
-
----
 
 ## ⚡ speedrun setup (literally 2 minutes)
 
