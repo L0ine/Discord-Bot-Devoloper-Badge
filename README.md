@@ -48,14 +48,15 @@ https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=20
 
 **step 1: run the container**
 ```bash
-docker run -d 
-  --name discord-dev-badge-bot 
-  --restart unless-stopped 
-  -e DISCORD_BOT_TOKEN="" 
-  -e CLIENT_ID="" 
-  -e GUILD_ID="" 
-  -e YOUR_USER_ID="" 
+docker run -d \
+  --name discord-dev-badge-bt \
+  --restart unless-stopped \
+  -e DISCORD_BOT_TOKEN="" \
+  -e CLIENT_ID="" \
+  -e GUILD_ID="" \
+  -e YOUR_USER_ID="" \
   ghcr.io/l0ine/discord-bot-devoloper-badge:latest
+
 
 ```
 
