@@ -186,12 +186,12 @@ python discord-dev-badge-bot.py
 
 ```env
 # Discord Bot Configuration
-DISCORD_BOT_TOKEN=MTQxOTAyNTU0MjYxMDY4MjEyNw.Ge0QRb.wByMGWbeWjS7IBQPY6nyFAhCRQpkKaLYS2wbbQ
-CLIENT_ID=999276298432163891
+DISCORD_BOT_TOKEN=
+CLIENT_ID=
 
 # Optional Settings
-GUILD_ID=1256747980250288168  # Für schnellere Slash Command Updates
-YOUR_USER_ID=999276298432163891  # Für gezielte DM-Erinnerungen
+GUILD_ID=  # Für schnellere Slash Command Updates
+YOUR_USER_ID=  # Für gezielte DM-Erinnerungen
 ```
 
 ---
