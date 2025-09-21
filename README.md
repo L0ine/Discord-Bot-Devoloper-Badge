@@ -1,4 +1,4 @@
-# 🎖️ Discord Developer Badge Bot
+# <img width="40" height="40" alt="discord-logo" src="https://github.com/user-attachments/assets/adabd300-70df-4847-9b34-e51d207d254d" /> <img width="40" height="40" alt="grafik" src="https://github.com/user-attachments/assets/478efc93-83c4-46bc-acb7-94e81883d652" /> Discord Developer Badge Bot
 
 <div align="center">
 
@@ -7,11 +7,10 @@
 [![GitHub Release](https://img.shields.io/github/v/release/L0ine/Discord-Bot-Devoloper-Badge?style=for-the-badge&logo=github)](https://github.com/L0ine/Discord-Bot-Devoloper-Badge/releases)
 [![Docker Pulls](https://img.shields.io/badge/Docker-Available-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/L0ine/Discord-Bot-Devoloper-Badge/pkgs/container/discord-bot-devoloper-badge)
 
-**🚀 Automatisiere deinen Weg zum Discord Active Developer Badge! 🚀**
 
-*Ein selbst-gehosteter Bot, der dich nie wieder vergessen lässt, deine Developer-Aktivität aufrechtzuerhalten*
+**🚀 Self-hosted bot that gives you the Developer Badge in Discord ! 🚀**
 
-[📋 Quick Start](#-quick-start) • [🎯 Badge Anleitung](#-discord-developer-badge-erhalten) • [🐳 Docker Setup](#-installation) • [📊 Features](#-features)
+[📋 Quick Start](#-quick-start) • [🎯 Badge Anleitung](#-discord-developer-badge-erhalten) • [🐳 Docker Setup](#-installation) 
 
 </div>
 
