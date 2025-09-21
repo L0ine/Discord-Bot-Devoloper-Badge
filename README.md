@@ -14,7 +14,7 @@
 `` This is a Tutorial for Discord's **active developer badge ``
 
 ``If You have problems with the Bot you can join my 1. ``
-<a href="https://discord.gg/YOUR_INVITE_CODE">
+<a href="https://discord.gg/UP3PRuHZBe">
 <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=7289DA" alt="Join Discord Server"/>
 </a>
 
