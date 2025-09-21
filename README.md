@@ -16,64 +16,43 @@
 
 ---
 
-## 🎯 Discord Developer Badge erhalten
+## 🎯 Getting the Discord Developer Badge
 
 ### ❓ Was ist der Active Developer Badge?
 
-Der **Discord Active Developer Badge** ist ein **exklusives Profilabzeichen** für Entwickler, die aktiv Discord Bots entwickeln und betreiben. Es zeigt anderen, dass du ein echter Discord-Entwickler bist! 
+What is the **Active Developer Badge?** The Discord Active Developer Badge is an **exclusive profile badge** for developers actively creating and running Discord bots. It shows others you’re a real Discord developer.
 
-<div align="center">
 
-| Ohne Badge | Mit Badge |
-|------------|-----------|
-| ![Normal Profile](https://img.shields.io/badge/👤-Normal%20Profile-gray) | ![Developer Profile](https://img.shields.io/badge/🎖️-Active%20Developer-5865F2) |
+| This is what you get! | 
+|-------|
+ <img width="296" height="397" alt="grafik" src="https://github.com/user-attachments/assets/b5ba47e6-f01e-4429-95e6-a02b5e75d053" />
 
-</div>
 
-### 🔥 Warum ist der Badge so begehrt?
+### 📋 Badge Requirements (Full Guide):
 
-- ✨ **Exklusivität**: Nur für aktive Bot-Entwickler
-- 🏆 **Status Symbol**: Zeigt deine Entwickler-Skills
-- 🎨 **Profilverschönerung**: Macht dein Discord-Profil einzigartig
-- 📈 **Community Recognition**: Andere erkennen dich als Entwickler
+#### ** Step 1: Discord Application **
+1. 🌐 Go to [Discord Developer Portal](https://discord.com/developers/applications)
+2. 🆕 Click on **"New Application"**
+3. 📝 Name Your Bot
+4. 🆔 Copy the Application Key 
+5. 🤖 Go to **"Bot"** Click Reset Token and copy
 
-### 📋 Badge Anforderungen (Vollständige Anleitung)
-
-#### **Phase 1: Discord Application erstellen**
-1. 🌐 Gehe zu [Discord Developer Portal](https://discord.com/developers/applications)
-2. 🆕 Klicke auf **"New Application"**
-3. 📝 Gib deinem Bot einen coolen Namen
-4. 🤖 Gehe zu **"Bot"** → **"Add Bot"**
-5. 🔑 **Token kopieren** (wird später benötigt!)
-6. 🆔 **Application ID kopieren** (auch wichtig!)
-
-#### **Phase 2: Bot Permissions konfigurieren**
+#### **Step 2: Bot Permission Config**
 1. ⚙️ In Bot Settings → **"Privileged Gateway Intents"**:
    - ✅ Message Content Intent (optional)
    - ✅ Server Members Intent (optional)
 2. 🛡️ In **"OAuth2"** → **"URL Generator"**:
-   - ✅ Scopes: `bot` + `applications.commands`
-   - ✅ Permissions: `Send Messages` + `Use Slash Commands`
-
-#### **Phase 3: Bot zu Server hinzufügen**
+   - ✅ Scopes: `bot`
+   - ✅ Permissions: `Administrator`
+  
+#### **Step 3: Invite Bot to Server**
 ```
 🔗 Invite Link Template:
 https://discord.com/api/oauth2/authorize?client_id=DEINE_CLIENT_ID&permissions=2048&scope=bot%20applications.commands
 ```
-**Ersetze `DEINE_CLIENT_ID` mit deiner echten Application ID!**
+**Replace `YOUR_CLIENT_ID` with your real Application ID!**
 
-#### **Phase 4: Bot aktivieren (Das macht dieser Bot!)**
-- 🏓 **Mindestens 1x pro Monat** einen Slash Command ausführen
-- ✅ **Unser Bot erinnert dich automatisch** per DM
-- 📱 **Ein einfaches `/ping`** reicht schon aus!
-- ⏰ **25-Tage Erinnerungsintervall** (sicher vor Ablauf)
-
-#### **Phase 5: Badge beantragen**
-1. 🌐 Zurück zum [Developer Portal](https://discord.com/developers/applications)
-2. 🎖️ Deine App auswählen → **"Active Developer"**
-3. ✅ Auf **"Get Badge"** klicken
-4. 🎉 **Badge erscheint in deinem Profil!**
-
+Or if you want to make your Bot privat   Disable Public Bot - Go to Installation > Install Link and select none
 
 ---
 
@@ -149,6 +128,25 @@ CLIENT_ID=
 GUILD_ID=  
 YOUR_USER_ID=  
 ```
+
+
+
+#### **Step 4: Bot aktivieren (Das macht dieser Bot!)**
+- 🏓 **Mindestens 1x pro Monat** einen Slash Command ausführen
+- ✅ **Unser Bot erinnert dich automatisch** per DM
+- 📱 **Ein einfaches `/ping`** reicht schon aus!
+- ⏰ **25-Tage Erinnerungsintervall** (sicher vor Ablauf)
+
+#### **Phase 5: Badge beantragen**
+1. 🌐 Zurück zum [Developer Portal](https://discord.com/developers/applications)
+2. 🎖️ Deine App auswählen → **"Active Developer"**
+3. ✅ Auf **"Get Badge"** klicken
+4. 🎉 **Badge erscheint in deinem Profil!**
+
+
+
+
+
 
 ---
 
