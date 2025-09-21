@@ -1,6 +1,5 @@
 # <img width="40" height="40" alt="discord-logo" src="https://github.com/user-attachments/assets/adabd300-70df-4847-9b34-e51d207d254d" /> <img width="40" height="40" alt="grafik" src="https://github.com/user-attachments/assets/478efc93-83c4-46bc-acb7-94e81883d652" /> discord dev badge bot
 
-
 <div align="left">
 
 ![Discord Developer Badge](https://img.shields.io/badge/Discord-Developer%20Badge-5865F2?style=for-the-badge&logo=discord&logoColor=white)
@@ -10,9 +9,15 @@
 ---
 
 ### what's this about?
-**literally just want that shiny dev badge? I got you =)**
+``literally just want that shiny dev badge? I got you =)``
 
-This is a Tutorial for Discord's **active developer badge**
+`` This is a Tutorial for Discord's **active developer badge ``
+
+``If You have problems with the Bot you can join my 1. ``
+<a href="https://discord.gg/YOUR_INVITE_CODE">
+<img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=7289DA" alt="Join Discord Server"/>
+</a>
+
 
 
 ## ⚡ speedrun setup (literally 2 minutes)
